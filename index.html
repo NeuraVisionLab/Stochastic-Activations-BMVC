@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project page for Stochastic Nonlinearities Improve Uncertainty Estimation, accepted at BMVC 2026.">
+  <meta name="theme-color" content="#0d7f5f">
+  <title>Stochastic Nonlinearities Improve Uncertainty Estimation</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wide-container topbar-inner">
+      <a class="site-brand" href="#top" aria-label="Back to top">
+        <img src="assets/favicon-32.png" alt="">
+        <span>Stochastic Nonlinearities</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#video">Video</a>
+        <a href="#method">Method</a>
+        <a href="#quantitative">Results</a>
+        <a href="#bibtex">BibTeX</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wide-container has-text-centered">
+        <h1>Stochastic Nonlinearities Improve<br class="desktop-break"> Uncertainty Estimation</h1>
+
+        <p class="authors">
+          <a href="mailto:m.sarhangzadeh@bilkent.edu.tr">Mohammad Sarhangzadeh</a><sup>1</sup>,
+          <a href="mailto:amirreza@bilkent.edu.tr">Amirreza M. Shebly</a><sup>1</sup>,
+          <a href="mailto:doruk.oner@bilkent.edu.tr">Doruk Oner</a><sup>1</sup>
+        </p>
+        <p class="affiliations"><sup>1</sup>NeuraVision Lab, Bilkent University</p>
+        <p class="venue">British Machine Vision Conference · BMVC 2026</p>
+
+        <div class="logo-row" aria-label="Affiliation and conference logos">
+          <a class="institution-logo bilkent-logo" href="https://w3.bilkent.edu.tr/" target="_blank" rel="noreferrer" aria-label="Bilkent University">
+            <img src="assets/bilkent-logo.png" alt="Bilkent University logo">
+          </a>
+          <a class="institution-logo neuravision-logo" href="https://neuravisionlab.com/" target="_blank" rel="noreferrer" aria-label="NeuraVision Lab">
+            <img src="assets/neuravision-mark.png" alt="NeuraVision Lab mark">
+            <span>NeuraVision Lab</span>
+          </a>
+          <a class="institution-logo bmvc-logo" href="https://bmvc2026.bmva.org/" target="_blank" rel="noreferrer" aria-label="BMVC 2026">
+            <img src="assets/bmvc-2026-logo.png" alt="BMVC 2026 logo">
+          </a>
+        </div>
+
+        <div class="resource-links" aria-label="Project resources">
+          <a class="pill" href="paper.pdf" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h5M9.5 13h5M9.5 17h5"/></svg>
+            Paper
+          </a>
+          <a class="pill" href="#video">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+            Video
+          </a>
+          <a class="pill" href="#bibtex">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h10M7 9h10M7 13h6M5 3h14v18H5z"/></svg>
+            BibTeX
+          </a>
+          <a class="pill" href="mailto:m.sarhangzadeh@bilkent.edu.tr">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg>
+            Contact
+          </a>
+          <span class="pill pill-muted" title="Add the repository URL here when the code is public">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
+            Code soon
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="content-container">
+        <div class="section-heading-row">
+          <div>
+            <span class="eyebrow">8-minute paper presentation</span>
+            <h2 class="section-title">Paper Video</h2>
+          </div>
+          <p class="section-kicker">An 8-minute presentation covering the motivation, stochastic activation mechanism, information preservation, experiments, and main results.</p>
+        </div>
+
+        <div class="video-shell" id="video-shell">
+          <div class="video-placeholder" id="video-placeholder">
+            <img src="assets/site-icon.png" alt="" aria-hidden="true">
+            <div>
+              <strong>Loading paper presentation…</strong>
+              <span>If the player does not appear, use the YouTube link shown here.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="abstract">
+      <div class="text-container">
+        <h2 class="section-title has-text-centered">Abstract</h2>
+        <div class="abstract-text">
+          <p>Reliable uncertainty estimation is important across visual recognition tasks, providing information about the confidence and reliability of model predictions. Many uncertainty estimation methods obtain predictive diversity through mechanisms that suppress intermediate features, perturb the input, or require substantial additional computation.</p>
+          <p>We reframe stochastic activation switching as a lightweight mechanism for uncertainty estimation. The method samples between nonlinear activation functions, inducing predictive diversity while keeping intermediate feature pathways active. This enables uncertainty estimation from a single trained model without the training cost of ensembles, task-specific uncertainty heads, or architectural redesign.</p>
+          <p>Across classification, semantic segmentation, and out-of-distribution detection—with convolutional and transformer-based architectures—stochastic activation switching improves uncertainty quality while preserving competitive primary-task performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="teaser section-tight">
+      <div class="content-container has-text-centered">
+        <figure class="teaser-figure">
+          <img src="assets/method-overview.png" alt="Multiple stochastic activation passes through a single model produce predictions whose variance gives the uncertainty map.">
+        </figure>
+        <h2 class="lead-line">One set of weights. Different nonlinear pathways. Predictive disagreement becomes uncertainty.</h2>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="content-container">
+        <span class="eyebrow">Method</span>
+        <h2 class="section-title">Stochastic Activation Switching</h2>
+
+        <div class="soft-card method-card">
+          <div class="method-copy">
+            <p>Each activation unit samples between the backbone’s native activation and an alternative nonlinearity. Instead of deleting features, the method perturbs the nonlinear transformation applied to them while keeping the intermediate feature pathways available.</p>
+            <p>The same stochastic mechanism is used during training and inference. At test time, repeated activation configurations produce a stochastic activation trajectory: multiple predictions from the same learned parameters but different nonlinear pathways.</p>
+            <div class="equation" aria-label="Stochastic activation equation">
+              h<sub>j</sub><sup>(l,t)</sup> = (1 − m<sub>j</sub><sup>(l,t)</sup>) σ<sub>orig</sub>(z<sub>j</sub><sup>(l,t)</sup>) + m<sub>j</sub><sup>(l,t)</sup> σ<sub>alt</sub>(z<sub>j</sub><sup>(l,t)</sup>)
+            </div>
+          </div>
+          <div class="method-notes">
+            <div><strong>p = 0.5</strong><span>uniform switching</span></div>
+            <div><strong>Node-level</strong><span>default granularity</span></div>
+            <div><strong>0</strong><span>extra trainable parameters</span></div>
+          </div>
+        </div>
+
+        <div class="soft-card code-card">
+          <figure class="code-image-wrap">
+            <img src="assets/stochastic-activation-code.png" alt="PyTorch StochasticActivation module that samples a switch mask and selects between the original and alternative activation functions.">
+          </figure>
+          <div class="code-copy">
+            <h3>A drop-in stochastic nonlinearity</h3>
+            <p>The switch remains stochastic during inference. This is important: repeated activation configurations are exactly what create the predictive distribution used for uncertainty estimation.</p>
+            <p>We use the backbone’s native activation with <strong>SiLU for classification</strong> and <strong>Tanh for segmentation</strong>.</p>
+          </div>
+        </div>
+
+        <div class="soft-card inference-card">
+          <div>
+            <span class="step-number">01</span>
+            <strong>Train normally</strong>
+            <p>Sample activation choices and optimize the standard task loss.</p>
+          </div>
+          <span class="step-arrow" aria-hidden="true">→</span>
+          <div>
+            <span class="step-number">02</span>
+            <strong>Freeze weights</strong>
+            <p>At inference, keep one learned model and resample activation configurations.</p>
+          </div>
+          <span class="step-arrow" aria-hidden="true">→</span>
+          <div>
+            <span class="step-number">03</span>
+            <strong>Aggregate passes</strong>
+            <p>Use the mean as prediction and empirical variance as uncertainty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uncertainty-quality">
+      <div class="content-container">
+        <span class="eyebrow">Why this stochasticity?</span>
+        <h2 class="section-title">Preserving Structure Under Stochasticity</h2>
+        <p class="section-intro">MC Dropout creates diversity by masking activations. Stochastic activation switching instead changes how features are transformed while keeping their pathways active.</p>
+
+        <figure class="soft-card figure-card">
+          <img src="assets/uncertainty-comparison.png" alt="Comparison of stochastic activation and MC-Dropout uncertainty maps on abdominal CT segmentation.">
+          <figcaption>Under stronger test-time stochasticity, activation switching keeps uncertainty more localized around boundaries and prediction errors, while MC Dropout becomes more diffuse.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="analysis">
+      <div class="content-container">
+        <span class="eyebrow">Diagnostic analysis</span>
+        <h2 class="section-title">Information Preservation</h2>
+        <p class="section-intro">Information Destruction Rate compares estimated layer input–output information under stochastic inference with a deterministic reference. Lower is better. IDR is used only for analysis—not as an additional training loss.</p>
+
+        <div class="soft-card idr-card">
+          <div class="idr-copy">
+            <div class="equation compact-equation">IDR<sup>(l)</sup> = 1 − (1/T) Σ<sub>t=1</sub><sup>T</sup> I<sub>t</sub><sup>(l)</sup> / I<sub>full</sub><sup>(l)</sup></div>
+            <p>Across Massachusetts Roads, DRIVE, CIFAR-10, and MiniImageNet, stochastic activation switching yields substantially lower IDR than MC Dropout.</p>
+            <div class="idr-legend">
+              <span><b>Lower IDR</b> → more estimated information retained</span>
+              <span><b>Diagnostic only</b> → no extra objective</span>
+            </div>
+          </div>
+          <img src="assets/information-preservation.png" alt="Information destruction rate comparison showing lower values for the proposed method than MC-Dropout.">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quantitative">
+      <div class="content-container">
+        <div class="section-heading-row results-heading">
+          <div>
+            <span class="eyebrow">Experiments</span>
+            <h2 class="section-title">Quantitative Results</h2>
+          </div>
+          <p class="section-kicker">Browse every reported segmentation and classification table without a long wall of rows. Choose a result family, then slide between datasets.</p>
+        </div>
+
+        <div class="results-carousel" id="results-carousel" aria-roledescription="carousel" aria-label="Quantitative result tables">
+          <div class="carousel-tabs" role="tablist" aria-label="Result table selection" id="result-tabs"></div>
+
+          <div class="carousel-frame">
+            <button class="carousel-arrow prev" id="results-prev" type="button" aria-label="Previous results table">←</button>
+            <div class="carousel-stage" id="results-stage" aria-live="polite"></div>
+            <button class="carousel-arrow next" id="results-next" type="button" aria-label="Next results table">→</button>
+          </div>
+
+          <div class="carousel-footer">
+            <div class="carousel-dots" id="result-dots" aria-label="Result table pages"></div>
+            <span id="results-counter" class="carousel-counter">1 / 4</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="qualitative">
+      <div class="content-container">
+        <span class="eyebrow">Qualitative results</span>
+        <h2 class="section-title">Uncertainty Near Difficult Predictions</h2>
+        <p class="section-intro">The uncertainty maps are obtained from the variance across five stochastic activation trajectories.</p>
+
+        <figure class="soft-card figure-card">
+          <img src="assets/qualitative-results.png" alt="Aerial road and retinal vessel segmentation examples with input, ground truth, prediction, and uncertainty map.">
+          <figcaption>From left to right: input, ground truth, prediction, and uncertainty. Higher uncertainty appears around ambiguous structures and prediction errors.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="takeaway">
+      <div class="content-container">
+        <div class="takeaway-card">
+          <span class="eyebrow">Takeaway</span>
+          <h2>Predictive diversity does not have to come from masking features or training multiple models.</h2>
+          <p class="takeaway-lead">By resampling nonlinear activation choices inside a single trained network, stochastic activation switching produces multiple functional pathways while keeping intermediate features available. Their disagreement gives a practical uncertainty signal without an auxiliary uncertainty head or architectural redesign.</p>
+          <div class="takeaway-points">
+            <div><strong>Single-model uncertainty</strong><span>One set of learned weights produces multiple stochastic predictions at inference time.</span></div>
+            <div><strong>Representation-aware stochasticity</strong><span>The method changes nonlinear transformations instead of explicitly removing intermediate features.</span></div>
+            <div><strong>Across tasks and shifts</strong><span>We observe competitive task performance and strong uncertainty behavior across classification, segmentation, and OOD evaluation.</span></div>
+          </div>
+          <p class="takeaway-limit"><strong>Current trade-off:</strong> repeated stochastic passes add inference cost, and the activation pair influences the balance between predictive performance and calibration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bibtex">
+      <div class="content-container bibtex-section">
+        <div class="bibtex-heading">
+          <h2 class="section-title">BibTeX</h2>
+          <button id="copy-bibtex" type="button">Copy</button>
+        </div>
+        <pre class="bibtex"><code id="bibtex-code">@inproceedings{sarhangzadeh2026stochastic,
+  title     = {Stochastic Nonlinearities Improve Uncertainty Estimation},
+  author    = {Sarhangzadeh, Mohammad and Shebly, Amirreza M. and Oner, Doruk},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  year      = {2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="content-container footer-inner">
+      <img src="assets/favicon-32.png" alt="">
+      <p>Stochastic Nonlinearities Improve Uncertainty Estimation · BMVC 2026</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">BibTeX copied</div>
+  <script src="script.js"></script>
+</body>
+</html>
