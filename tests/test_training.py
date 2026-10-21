@@ -162,7 +162,10 @@ def test_custom_optimizer_loss_and_mapping_output():
             return {"out": y, "aux": y + 1}
     model = StochasticModel(MappingNet())
     optim = torch.optim.SGD(model.parameters(), lr=0.1)
-    loss = lambda output, target: nn.functional.cross_entropy(output, target)
+    
+    def loss(output, target):
+        return nn.functional.cross_entropy(output, target)
+    
     t = Trainer(model, optimizer=optim, output_key="out", loss_fn=loss)
     t.fit(loader(8), epochs=1, verbose=False)
     assert t.test(loader(8), n_samples=2)["accuracy"] >= 0
