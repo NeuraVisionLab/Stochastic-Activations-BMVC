@@ -4,11 +4,11 @@
 
 StochAct is a general-purpose research library based on *Stochastic Nonlinearities Improve Uncertainty Estimation* (BMVC 2026). It converts supported registered activation layers in an ordinary `torch.nn.Module` into stochastic activation switches, then estimates uncertainty by repeating forward passes with the **same trained weights** and different activation choices.
 
-StochAct is a general-purpose research toolkit. It does not require reproducing any specific BMVC dataset, configuration, or numerical result. **This source package is prepared for publication but is not yet published to PyPI.** Before public release, repository maintainers should confirm licensing and contributor credits.
+StochAct is a general-purpose research toolkit. It does not require reproducing any specific BMVC dataset, configuration, or numerical result. The source, examples, and documentation are available in this repository. See `LICENSE` and `CONTRIBUTING.md` for licensing and contribution information.
 
 ## Installation
 
-After publication to PyPI, install using `pip install stochact`. Until then, install from the checked-out source:
+Install using `pip install stochact` once the PyPI release is available, or install directly from GitHub using `pip install git+https://github.com/NeuraVisionLab/Stochastic-Activations-BMVC.git`. For local development:
 
 
 ```bash
