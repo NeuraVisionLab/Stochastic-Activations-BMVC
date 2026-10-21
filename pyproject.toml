@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stochact"
+version = "1.0.0"
+description = "Stochastic activation switching for PyTorch models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    {name = "StochAct contributors"},
+]
+keywords = ["pytorch", "stochastic activations", "uncertainty estimation", "deep learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["torch>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov>=4", "ruff>=0.6", "build>=1", "twine>=5"]
+examples = ["torchvision>=0.15"]
+plots = ["matplotlib>=3.6"]
+all = ["torchvision>=0.15", "matplotlib>=3.6"]
+
+[tool.setuptools.packages.find]
+include = ["stochact*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B", "UP"]
+ignore = ["E701", "E702", "E741"]  # Existing compact expressions and loop variables
+
+[tool.coverage.run]
+source = ["stochact"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:"]
